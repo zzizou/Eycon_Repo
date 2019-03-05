@@ -4,12 +4,228 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Basic Form </title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <script src="main.js"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+                <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+        </div>
+    </div>
     
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+        </script>
 </body>
 </html>
+
+
+
+<!--   
+
+{% extends 'testlayout.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laliga Clubs</title>
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-reboot.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+                <style>
+                  body{
+                    font-family: 'Roboto Slab', serif;
+
+                  }
+                  .card-img-bottom {
+                            width: 100%;
+                             height: 19vw;
+                            object-fit: cover;
+                                }
+
+                </style>
+</head>
+<body>
+    <br>
+    <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 wow animated fadeInDown">
+                        <div class="card-header bg-dark">
+                          <h4 class=" text-center" style="color: white;">Laliga Teams</h4>
+                        </div>
+                    <br>
+
+                </div>
+            </div>
+            <br>
+            <div class="row wow animated fadeInLeft ">
+                <div class="col-md-12">
+                <h4>Welcome | Bienvenido | Bienvenue   </h4>
+            <p>Check out the Statistics and Analysis of your team through graphs and compare it with your rivals. You can also check out the tweets by your team.</p>
+        </div>
+        </div>
+        <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card overlay hovereffect wow animated fadeInLeft" style="height: 20rem;">
+                        <div class="card-header  bg-primary">
+                            <h3 class="text-center" style="color: white;">FC Barcelona</h3>
+                        </div>
+                        <a href="{{url_for('barcapage')}}">   <img class="card-img-bottom img-fluid" src="static\assets\img\barcateam.jpg" alt="FC Barcelona Image"> </a>
+                        <div class="overlay">
+                                <br><br><br>
+                                
+                                <a class="info" href="{{url_for('barcapage')}}">See Analysis </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 " >
+                    <div class="card hovereffect wow animated fadeInLeft" >
+                        <div class="card-header bg-primary" >
+                            <h3 class="text-center" style="color: white;">Real Madrid</h3>
+                        </div>
+                        <a href="{{url_for('madridpage')}}">  <img class="card-img-bottom img-fluid" src="static\assets\img\madridteam.jpg" alt="Real Madrid Image"> </a>
+                        <div class="overlay">
+                                
+                                <br><br><br>
+                                <a class="info" href="{{url_for('madridpage')}}">See Analysis </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card hovereffect wow animated fadeInLeft" style="height: 20rem;">
+                        <div class="card-header bg-primary">
+                            <h3 class="text-center" style="color: white;">Atletico Madrid</h3>
+                        </div>
+                        <a href="{{url_for('atletico')}}">        <img class="card-img-bottom img-fluid" src="static\assets\img\atleticoteam.jpg" alt="Atletico Madrid Image"> </a>
+                        <div class="overlay">
+                                
+                                <br><br><br>
+                                <a class="info" href="{{url_for('atletico')}}">See Analysis </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <br> <br>
+            <div class="row">
+                <div class="col-md-4">
+                        <div class="card wow hovereffect animated fadeInLeft" style="height: 20rem;">
+                            <div class="card-header bg-primary">
+                                <h3 class="text-center" style="color: white;">Sevilla FC</h3>
+                            </div>
+                            <a href="{{url_for('sevilla')}}">          <img class="img-fluid card-img-bottom" src="static\assets\img\sevillateam.png" alt="Sevilla FC Image"> </a>
+                            <div class="overlay">
+                                    <br><br><br>
+                                    <a class="info" href="{{url_for('sevilla')}}">See Analysis </a>
+                        </div>
+                        </div>
+                </div>
+
+                 <div class="col-md-4">
+                        <div class="card wow hovereffect animated fadeInLeft" style="height: 20rem;">
+                            <div class="card-header bg-primary">
+                                <h3 class="text-center" style="color: white;">Valencia CF</h3>
+                            </div>
+                            <a href="{{url_for('valencia')}}">     <img class="img-fluid card-img-bottom" src="static\assets\img\valenciateam.jpg" alt="Valencia Team Image"> </a>
+                            <div class="overlay">
+                                    <br><br><br>
+                                    <a class="info" href="{{url_for('valencia')}}">See Analysis </a>
+                        </div>
+                        </div>
+                </div>
+
+                 <div class="col-md-4">
+                        <div class="card wow hovereffect animated fadeInLeft" style="height: 20rem;">
+                            <div class="card-header bg-primary">
+                                <h3 class="text-center" style="color: white;">Athletic Club FC</h3>
+                            </div>
+                            <a href="{{url_for('athletic')}}">   <img class="img-fluid card-img-bottom" src="static\assets\img\athleticbilbao.jpg" alt="Athletic Bilbao Image"> </a>
+                            <div class="overlay">
+                                    <br><br><br>
+                                    <a class="info" href="{{url_for('athletic')}}">See Analysis </a>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <br> <br>
+            <div class="row">
+                <div class="col-md-4">
+                        <div class="card wow hovereffect animated fadeInLeft" style="height: 20rem;">
+                            <div class="card-header bg-primary">
+                                <h3 class="text-center" style="color: white;">Villareal </h3>
+                            </div>
+                            <a href="{{url_for('villareal')}}">  <img class="img-fluid card-img-bottom" src="static\assets\img\villareal.jpg" alt="Villareal Image"> </a>
+                            <div class="overlay">
+                                    <br><br><br>
+                                    <a class="info" href="{{url_for('villareal')}}">See Analysis </a>
+                        </div>
+                        </div>
+                </div>
+
+                 <div class="col-md-4">
+                        <div class="card wow hovereffect animated fadeInLeft" style="height: 20rem;">
+                            <div class="card-header bg-primary">
+                                <h3 class="text-center" style="color: white;">Real Betis</h3>
+                            </div>
+                           <a href="{{url_for('betis')}}">  <img class="img-fluid card-img-bottom" src="static\assets\img\realbetis.jpg" alt="Real Betis Image"> </a>
+                           <div class="overlay">
+                                <br><br><br>
+                                <a class="info" href="{{url_for('betis')}}">See Analysis </a>
+                    </div>
+                        </div>
+                </div>
+
+                 <div class="col-md-4">
+                        <div class="card hovereffect wow animated fadeInLeft" style="height: 20rem;">
+                            <div class="card-header bg-primary">
+
+                                <h3 class="text-center" style="color: white;">Getafe FC</h3>
+                            </div>
+                            
+                            <a href="{{url_for('getafe')}}">   <img class=" img-fluid card-img-bottom" src="static\assets\img\getafe.jpg" alt="Getafe Image"> </a>
+                            <div class="overlay">
+                                   <br><br><br>
+                                    <a class="info" href="{{url_for('getafe')}}">See Analysis </a>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+     
+    <script src="/static/assets/bootstrap/js/bootstrap.min.js">
+    </script>
+    <script src="/static/assets/js/jquery.min.js" ></script>
+    <script src="/static/assets/js/wow.min.js" ></script>
+
+<script>
+    new WOW().init();
+</script>
+    {%endblock%}
+
+-->

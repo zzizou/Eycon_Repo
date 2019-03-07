@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Basic Form </title>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+        <link rel = "stylesheet" type = "text/css"  href = "styssling.css" />
+    <style>
+        div.zee {
+            width: 600px;
+            margin: auto;
+        }
+        
+        .lol {
+            margin-left: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+        <div class="maindiv">
+
+    <form method="POST" onsubmit="return validation();">
+        
+        <div class="zee">
+            <div style="padding: 0.5rem; background-color: #292828">
+            <h2 style="color:honeydew; text-align: center;">Sign Up Form</h2>
+            </div>
+            <p>Please complete this form. Mandatory fields are marked with *</p>
+            <hr>
+            <h3>CONTACT DETAILS</h3>
+            <hr>
+            <label for="">Name<font color="red">*</font></label>
+            <input id = "name" name="name" class="lol" placeholder="Name" type="text"> <br>
+            <label for="">Telephone</label>
+            <input class="lol" type="tel"> <br>
+            <label for="">Email<font color="red">*</font></label>
+            <input id = "email" name="email" class="lol" type="email">
+            <input id = "password" name="password" class="lol" type="password">
+
+            <hr>
+            <h3>PERSONAL INFORMATION</h3>
+            <hr>
+            <label for="">Age<font color="red">*</font></label>
+            <input class="lol" type="number"> <br>
+            <label for="">Gender</label>
+            <select class="lol" name="">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select> <br>
+            <label for="">Write about Yourself?</label>
+            <textarea name="message" rows="7" cols="20"></textarea>
+           
+            <input style="margin-top:20px; " type="submit" name="submit" value="Submit Application Form">
+            <button onclick="myFunction()">Submit</button>
+
+        </div>
+    
+    </form>
+</div>
+<script>
+    function validation(){
+        var name = document.getElementById("name").value;
+        if (name = ""){
+            alert("Name is Required")
+        }
+    }
+    function myFunction(){
+
+        alert("Please Fill The Form");
+    }
+</script>
+</body>
+
+</html>
